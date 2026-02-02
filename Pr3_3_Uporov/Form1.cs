@@ -6,5 +6,10 @@ namespace Pr3_3_Uporov
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
