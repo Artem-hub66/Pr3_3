@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             pnMain = new Panel();
+            lblPassword = new Label();
             btnGuest = new Button();
             btnLogin = new Button();
             txtPassword = new TextBox();
             txtLogin = new TextBox();
             lblLogin = new Label();
-            lblPassword = new Label();
             pbLogo = new PictureBox();
             pnMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbLogo).BeginInit();
@@ -55,6 +55,15 @@
             pnMain.Size = new Size(329, 219);
             pnMain.TabIndex = 0;
             // 
+            // lblPassword
+            // 
+            lblPassword.AutoSize = true;
+            lblPassword.Location = new Point(135, 72);
+            lblPassword.Name = "lblPassword";
+            lblPassword.Size = new Size(58, 19);
+            lblPassword.TabIndex = 6;
+            lblPassword.Text = "Пароль";
+            // 
             // btnGuest
             // 
             btnGuest.BackColor = Color.FromArgb(67, 97, 238);
@@ -65,6 +74,7 @@
             btnGuest.TabIndex = 5;
             btnGuest.Text = "Войти как гость";
             btnGuest.UseVisualStyleBackColor = false;
+            btnGuest.Click += BtnGuest_Click;
             // 
             // btnLogin
             // 
@@ -76,6 +86,7 @@
             btnLogin.TabIndex = 4;
             btnLogin.Text = "Войти";
             btnLogin.UseVisualStyleBackColor = false;
+            btnLogin.Click += BtnLogin_Click;
             // 
             // txtPassword
             // 
@@ -100,15 +111,6 @@
             lblLogin.Size = new Size(52, 19);
             lblLogin.TabIndex = 0;
             lblLogin.Text = "Логин";
-            // 
-            // lblPassword
-            // 
-            lblPassword.AutoSize = true;
-            lblPassword.Location = new Point(135, 72);
-            lblPassword.Name = "lblPassword";
-            lblPassword.Size = new Size(58, 19);
-            lblPassword.TabIndex = 6;
-            lblPassword.Text = "Пароль";
             // 
             // pbLogo
             // 
@@ -137,7 +139,6 @@
             Name = "FormLogin";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Вход в систему";
-            Load += Form1_Load;
             pnMain.ResumeLayout(false);
             pnMain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pbLogo).EndInit();
